@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Run on CHROME"
+           tests="1"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="17.094">
+  <properties />
+  
+  
+            <testcase name="TC_02_Login_With_Github_Account_WithOut_Authorize" time="17.094" classname="Login_With_Github_Account" />
+      
+</testsuite>
