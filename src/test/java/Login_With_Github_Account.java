@@ -7,6 +7,9 @@ import org.testng.annotations.Test;
 import pageObjects.HomePageObject;
 import pageObjects.LoginPageObject;
 import pageObjects.SocialNetworkPageObject;
+import integrate.TestLinkIntegration;
+import testlink.api.java.client.TestLinkAPIException;
+import testlink.api.java.client.TestLinkAPIResults;
 
 public class Login_With_Github_Account extends BaseTest {
 	WebDriver driver;
@@ -14,8 +17,11 @@ public class Login_With_Github_Account extends BaseTest {
 	SocialNetworkPageObject socialNetworkPage;
 	HomePageObject homePage;
 	String loginWith = "github";
-	String email = "";
-	String pwd = "";
+	String email = "duc.hoang@inapps.net"; // Provide github email here
+	String pwd = "Hoangminhduc1993";// Provide github password here
+
+	String result = null;
+
 
 	//	String listName = randomString();
 	@Parameters({"browser", "url"})
@@ -50,7 +56,7 @@ public class Login_With_Github_Account extends BaseTest {
 	}
 
 	@Test
-	public void TC_02_Login_With_Github_Account_WithOut_Authorize() {
+	public void TC_02_Login_With_Github_Account_WithOut_Authorize()throws TestLinkAPIException {
 		log.info("Click login with Github button");
 		loginPage = new LoginPageObject(driver);
 		socialNetworkPage = loginPage.clickToLoginWithGithub(driver, loginWith);
@@ -74,12 +80,13 @@ public class Login_With_Github_Account extends BaseTest {
 
 /*		log.info("Delete item All");
 		homePage.deleteAlllist();*/
-
-
+		result = TestLinkAPIResults.TEST_PASSED;
+		System.out.println("Updating TestCase Execution Status in TestLink");
+		TestLinkIntegration.updateResult(null,TestLinkAPIResults.TEST_PASSED);
 	}
 
 	@AfterClass
-	public void close() {
+	public void close()  {
 //		driver.quit();
 	}
 }
