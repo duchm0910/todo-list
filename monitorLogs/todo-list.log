@@ -1,0 +1,10 @@
+[DEBUG] [2022-12-26 14:07:53,198] Debug Message Logged !!!
+[INFO ] [2022-12-26 14:07:53,199] Info Message Logged !!!
+[INFO ] [2022-12-26 14:07:53,292] ---------- START delete file in folder ----------
+[INFO ] [2022-12-26 14:07:53,292] ---------- END delete file in folder ----------
+[INFO ] [2022-12-26 14:07:57,225] Click login with Github button
+[INFO ] [2022-12-26 14:07:57,470] Input Email and Pwd GitHub
+[INFO ] [2022-12-26 14:08:07,625] Create A list 10 times
+[INFO ] [2022-12-26 14:08:10,553] Logout
+[INFO ] [2022-12-26 14:08:13,685] Login With Github again
+[INFO ] [2022-12-26 14:08:13,835] Delete item 5 to 10

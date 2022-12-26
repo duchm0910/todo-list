@@ -23,7 +23,7 @@ public class SocialNetworkPageObject extends BasePage {
 			if (!mainWindow.equalsIgnoreCase(childWindow)) {
 				driver.switchTo().window(childWindow);
 				sendKeytoLoginfield(driver, email, pwd);
-					clickOnAuthorize();
+				clickOnAuthorize();
 
 			}
 		}
@@ -34,6 +34,7 @@ public class SocialNetworkPageObject extends BasePage {
 		String mainWindow = driver.getWindowHandle();
 		Set<String> allWindowIDs = driver.getWindowHandles();
 		Iterator<String> iterator = allWindowIDs.iterator();
+
 		while (iterator.hasNext()) {
 			String childWindow = iterator.next();
 			if (!mainWindow.equalsIgnoreCase(childWindow)) {
@@ -53,6 +54,7 @@ public class SocialNetworkPageObject extends BasePage {
 
 		waitForElementClickable(driver, SocialNetworkPageUI.GITHUB_LOGIN_BTN);
 		clickToElement(driver, SocialNetworkPageUI.GITHUB_LOGIN_BTN);
+		sleepInSecond(2);
 
 	}
 

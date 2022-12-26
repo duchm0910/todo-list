@@ -4,10 +4,10 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="16.841">
+           time="19.990">
   <properties />
   
   
-            <testcase name="TC_02_Login_With_Github_Account_WithOut_Authorize" time="16.841" classname="com.todoList.Login_With_Github_Account" />
+            <testcase name="TC_02_Login_With_Github_Account_WithOut_Authorize" time="19.990" classname="com.todoList.Login_With_Github_Account" />
       
 </testsuite>

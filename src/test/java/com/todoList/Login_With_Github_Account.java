@@ -1,3 +1,5 @@
+package com.todoList;
+
 import commons.BaseTest;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;
@@ -29,8 +31,9 @@ public class Login_With_Github_Account extends BaseTest {
 	public void initBrowser(String browserName, String appUrl) {
 		driver = getBrowserDriver(browserName, appUrl);
 	}
-		@Test
-	public void TC_01_Login_With_Github_Account_With_Authorize()throws TestLinkAPIException {
+
+	//		@Test
+	public void TC_01_Login_With_Github_Account_With_Authorize() throws TestLinkAPIException {
 		log.info("Click login with Github button");
 		loginPage = new LoginPageObject(driver);
 		socialNetworkPage = loginPage.clickToLoginWithGithub(driver, loginWith);
@@ -52,14 +55,14 @@ public class Login_With_Github_Account extends BaseTest {
 
 		log.info("Delete item 5 to 10");
 		homePage.deleteSpecificList();
-		
-				result = TestLinkAPIResults.TEST_PASSED;
+
+		result = TestLinkAPIResults.TEST_PASSED;
 		System.out.println("Updating TestCase Execution Status in TestLink");
-		TestLinkIntegration.updateResult(null,TestLinkAPIResults.TEST_PASSED);
+		TestLinkIntegration.updateResult(null, TestLinkAPIResults.TEST_PASSED);
 	}
 
-//	@Test
-	public void TC_02_Login_With_Github_Account_WithOut_Authorize()throws TestLinkAPIException {
+	@Test
+	public void TC_02_Login_With_Github_Account_WithOut_Authorize() throws TestLinkAPIException {
 		log.info("Click login with Github button");
 		loginPage = new LoginPageObject(driver);
 		socialNetworkPage = loginPage.clickToLoginWithGithub(driver, loginWith);
@@ -83,13 +86,13 @@ public class Login_With_Github_Account extends BaseTest {
 
 /*		log.info("Delete item All");
 		homePage.deleteAlllist();*/
-		result = TestLinkAPIResults.TEST_PASSED;
+/*		result = TestLinkAPIResults.TEST_PASSED;
 		System.out.println("Updating TestCase Execution Status in TestLink");
-		TestLinkIntegration.updateResult(null,TestLinkAPIResults.TEST_PASSED);
+		TestLinkIntegration.updateResult(null,TestLinkAPIResults.TEST_PASSED);*/
 	}
 
 	@AfterClass
-	public void close()  {
+	public void close() {
 //		driver.quit();
 	}
 }
