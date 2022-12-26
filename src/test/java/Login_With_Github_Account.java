@@ -30,7 +30,7 @@ public class Login_With_Github_Account extends BaseTest {
 		driver = getBrowserDriver(browserName, appUrl);
 	}
 		@Test
-	public void TC_01_Login_With_Github_Account_With_Authorize() {
+	public void TC_01_Login_With_Github_Account_With_Authorize()throws TestLinkAPIException {
 		log.info("Click login with Github button");
 		loginPage = new LoginPageObject(driver);
 		socialNetworkPage = loginPage.clickToLoginWithGithub(driver, loginWith);
