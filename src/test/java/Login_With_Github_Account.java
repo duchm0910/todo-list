@@ -29,8 +29,7 @@ public class Login_With_Github_Account extends BaseTest {
 	public void initBrowser(String browserName, String appUrl) {
 		driver = getBrowserDriver(browserName, appUrl);
 	}
-
-//		@Test
+		@Test
 	public void TC_01_Login_With_Github_Account_With_Authorize() {
 		log.info("Click login with Github button");
 		loginPage = new LoginPageObject(driver);
@@ -53,9 +52,13 @@ public class Login_With_Github_Account extends BaseTest {
 
 		log.info("Delete item 5 to 10");
 		homePage.deleteSpecificList();
+		
+				result = TestLinkAPIResults.TEST_PASSED;
+		System.out.println("Updating TestCase Execution Status in TestLink");
+		TestLinkIntegration.updateResult(null,TestLinkAPIResults.TEST_PASSED);
 	}
 
-	@Test
+//	@Test
 	public void TC_02_Login_With_Github_Account_WithOut_Authorize()throws TestLinkAPIException {
 		log.info("Click login with Github button");
 		loginPage = new LoginPageObject(driver);
